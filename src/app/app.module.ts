@@ -11,13 +11,15 @@ import { HomeComponent } from './home/home.component';
 import { SmsComponent } from './sms/sms.component';
 import { KontakComponent } from './kontak/kontak.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'sms', component: SmsComponent},
   {path: 'kontak', component: KontakComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'logout', component: LogoutComponent}
 ];
 
 @NgModule({
@@ -26,11 +28,13 @@ const appRoutes: Routes = [
     HomeComponent,
     SmsComponent,
     KontakComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: true}

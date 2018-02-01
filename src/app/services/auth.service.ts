@@ -9,19 +9,10 @@ export class AuthService {
   private BASE_URL = 'http://localhost:5000/auth';
   private headers = new Headers({'Content-type': 'application/json'});
 
-  test(): string {
-    return 'working';
-  }
-
   constructor(private http: Http) { }
 
   login(user: User): Promise<any> {
-    const url = `${this.BASE_URL}/login`;
-    return this.http.post(url, user, {headers: this.headers}).toPromise();
-  }
-
-  register(user: User): Promise<any> {
-    const url = `${this.BASE_URL}/register`;
+    const url = `${this.BASE_URL}`;
     return this.http.post(url, user, {headers: this.headers}).toPromise();
   }
 

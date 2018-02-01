@@ -1,9 +1,9 @@
 <div class="ui menu">
-  <a class="item" routerLink="/home" routerLinkActive="active">Home</a>
-  <a class="item" routerLink="/sms" routerLinkActive="active">Sms</a>
+  <a class="item" routerLink="/home" routerLinkActive="active" *ngIf="loggedin">Home</a>
+  <a class="item" routerLink="/sms" routerLinkActive="active" *ngIf="loggedin">Sms</a>
   <div class="right menu">
     <a class="item">Help</a>
-    <a class="item">Logout</a>
+    <a class="item" routerLink="/logout" routerLinkActive="active" *ngIf="loggedin">Logout</a>
   </div>
 </div>
 <router-outlet></router-outlet>
